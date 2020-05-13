@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <h2>URLs</h2>
+    <table class="table table-striped table-responsive">
+      <thead>
+        <tr>
+          <th>fullUrl</th>
+          <th>shortUrl</th>
+          <th>Clicks</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {{#each urls}}
+          <td><a href="{{this.full}}">{{ this.full }}</a></td>
+          <td><a href="/url/{{this.short}}" target="__blank">{{ this.short }}</a></td>
+          <td>{{ this.click }}</td>
+          {{/each}}
+        </tr>
+
+      </tbody>
+    </table>
+
+
+    <hr />
+  </div>
+</body>
